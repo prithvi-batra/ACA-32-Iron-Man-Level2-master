@@ -1,4 +1,5 @@
 var bg, backgroundImg ;
+var stone ;
 var stoneGroup;
 function preload() {
   bgAnimation = loadAnimation("images/bg.jpg","images/bg.jpg","images/bg.jpg");
@@ -30,18 +31,17 @@ function draw() {
     bg.y = 0;
   }
   if (keyDown("up")){
-    iron.y = iron.y -12 ;
+    iron.y = iron.y -18 ;
   }
   if (keyDown("down")){
-    iron.y = iron.y +12 ;
+    iron.y = iron.y +18 ;
   }
   if (keyDown("left")){
-    iron.x = iron.x -12 ;
+    iron.x = iron.x -18 ;
   }
   if (keyDown("right")){
-    iron.x = iron.x +12 ;
+    iron.x = iron.x +18 ;
   }
-
   for( var i = 0 ; i<stoneGroup.length; i++){
     var temp = (stoneGroup).get(i);
     if(temp.isTouching(iron)){
@@ -53,7 +53,7 @@ function draw() {
 }
 function generateStones(){
   if(frameCount%100 == 0){
-    var stone = createSprite(random(150,1500),0,40,10);
+    stone = createSprite(random(150,1500),0,40,10);
     stone.addImage(stoneImage)
     stone.scale = 0.8;
     stone.velocityY = 4;

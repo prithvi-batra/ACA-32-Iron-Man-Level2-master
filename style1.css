@@ -1,7 +1,3 @@
-*{
-    transition: .5 ease-in-out;
-}
-
 marquee{
     color : blue;
     font-weight: 900;

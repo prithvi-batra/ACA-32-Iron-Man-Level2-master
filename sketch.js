@@ -48,6 +48,7 @@ function draw() {
         iron.collide(temp);
     }
 }
+  iron.setCollider("rectangle",100,-60,180,400);
   generateStones();
   drawSprites();   
 }
